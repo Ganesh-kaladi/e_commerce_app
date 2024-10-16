@@ -1,0 +1,1 @@
+export const findCartProductInFavPage = (cart,favItem)=> cart.includes(favItem);
