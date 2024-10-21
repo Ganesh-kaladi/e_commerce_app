@@ -11,18 +11,26 @@ export const Cartpage = () => {
         <Fragment>
             <Navcomponent />
             <main className="pt-20  flex justify-center">
-                <div className="grid  justify-center ">
-                    {
-                        cart?.length > 0 && cart.map(p => {
-                            return (
-                                <CartCard key={cart.id} cart={p} />
-                            )
-                        })
-                    }
-                </div>
-                <div className="ml-16">
-                    <PriceCard />
-                </div>
+                {
+                    cart?.length === 0 ?
+                        <div>
+                            <div className="px-4 py-2 bg-slate-500 text-slate-50 font-medium w-auto rounded-lg">Cart is Empty</div>
+                        </div> :
+                        <>
+                            <div className="grid  justify-center ">
+                                {
+                                    cart?.length > 0 && cart.map(p => {
+                                        return (
+                                            <CartCard key={cart.id} cart={p} />
+                                        )
+                                    })
+                                }
+                            </div>
+                            <div className="ml-16">
+                                <PriceCard />
+                            </div>
+                       </>
+                }
             </main>
         </Fragment>
     )

@@ -10,7 +10,7 @@ export const CartCard = ({cart})=>{
         })
     }
     return(
-        <section className="flex mb-8 bg-slate-50 min-w-[600px] max-w-[600px] rounded-r-md rounded-l-md">
+        <section className="flex mb-8 bg-slate-50 min-w-[600px] max-w-[600px] rounded-r-md rounded-l-md min-h-[200px] max-h-[200px]">
             <div>
                 <img src={images[2]} alt="" className="min-w-[200px] max-w-[200px] min-h-[200px] max-h-[200px] rounded-l-md" />
             </div>
@@ -28,8 +28,8 @@ export const CartCard = ({cart})=>{
                     <p>Rs. <span className="font-semibold">{price} </span>/-</p>
                 </div>
                 <div className="flex gap-4">
-                    <button onClick={()=>removeFromCart(id)}>remove from cart</button>
-                    <button>add to wishlist</button>
+                    <button onClick={()=>removeFromCart(id)} className=" bg-blue-300 px-2 py-1 rounded-md font-medium">remove from cart</button>
+                    <button className="bg-blue-300 px-2 py-1 rounded-md font-medium">add to wishlist</button>
                 </div>
             </div>
         </section>

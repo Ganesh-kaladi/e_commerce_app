@@ -34,12 +34,12 @@ export const Favoritecomponent = ({favItem})=>{
                     <p>Rs. <span className="font-semibold">{favItem.price} </span>/-</p>
                 </div>
                 <div className="flex gap-4">
-                    <button onClick={()=>addToCartFromFavList(favItem)}>
+                    <button onClick={()=>addToCartFromFavList(favItem)} className="bg-blue-300 px-2 py-1 rounded-md font-medium">
                         {
                             !isFindCartProductInFavPage ? 'add to cart': 'go to cart'
                         }
                     </button>
-                    <button onClick={()=>removeFromFavList(favItem.id)}>remove from favorite</button>
+                    <button onClick={()=>removeFromFavList(favItem.id)} className="bg-blue-300 px-2 py-1 rounded-md font-medium">remove from favorite</button>
                 </div>
             </div>
         </section>

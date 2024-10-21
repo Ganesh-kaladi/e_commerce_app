@@ -1,0 +1,1 @@
+export const findFavListForBtn = (favList,product)=>favList.includes(product);
